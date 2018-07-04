@@ -1,0 +1,101 @@
+# intents:
+#     - order_pizza
+#     - greet
+
+# entities:
+#     - size
+#     - toppings
+# slots:
+#     size:
+#          type: text
+#     toppings:
+#         type: text
+
+# templates:
+#     utter_greet:
+#         - 'Hello, how can I help you?'
+#         - 'Hi, I am here to help.'
+#     utter_get_pizza_size:
+#         - 'What pizza size?'
+#     utter_get_pizza_toppings:
+#         - 'What toppings would you like on your pizza?'
+# actions:
+#     - utter_greet
+#     - utter_get_pizza_size
+#     - utter_get_pizza_toppings
+#     - action.ActionOrderPizza
+slots:
+  product:
+    type: text
+  version:
+    type: text
+  keyword:
+    type: text
+  matches:
+    type: unfeaturized
+entities:
+    - product
+    - version
+    - keyword
+
+intents:
+    - greet
+    - affirm
+    - deny
+    - question
+    - thankyou
+    - request_info
+
+templates:
+  utter_greet:
+    - "hey there!"
+  utter_goodbye:
+    - "goodbye :("
+    - "Bye-bye"
+  utter_default:
+    - "default message"
+  utter_ack_dosearch: 
+    - "ok let me see what I can find"
+  utter_ack_findalternatives:
+    - "ok let me see what else there is"
+  utter_ask_didthathelp:
+    - text: "did that help?"
+      buttons:
+        - title: "yes"
+          payload: "no"
+  utter_ask_product: 
+    - "which product you are using?"
+  utter_ask_howcanhelp:
+    - "how can I help you?"
+  utter_ask_version:
+    - "version?"
+  utter_ask_details:
+    - "Can you please give details about the problem?"
+  # utter_ask_moreupdates: 
+  #   - "if you'd like to modify anything else, please tell me what"
+  # utter_ask_numpeople:
+  #   - "for how many people?"
+  # utter_ask_price: 
+  #   - text: "in which price range?"
+  #     buttons:
+  #     - title: "cheap"
+  #       payload: "cheap"
+  #     - title: "expensive"
+  #       payload: "expensive"
+  utter_on_it: 
+    - "I'm on it"
+
+actions:
+- utter_greet
+- utter_goodbye
+- utter_default
+- utter_ack_dosearch
+- utter_ack_findalternatives
+- utter_ask_product
+- utter_ask_howcanhelp
+- utter_ask_version
+- utter_ask_details
+- utter_on_it
+- utter_ask_didthathelp
+- action.ActionSearch
+- action.ActionSuggest

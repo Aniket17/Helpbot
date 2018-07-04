@@ -1,0 +1,16 @@
+## story_00914561
+* greet
+    - utter_greet
+    - utter_ask_howcanhelp
+* question
+    - utter_ask_product
+* question
+    - utter_ask_version
+* question
+    - utter_ask_details
+* question
+    - utter_on_it
+    - action_search
+    - action_suggest
+* affirm
+    - utter_ask_didthathelp
