@@ -1,6 +1,7 @@
 from rasa_core.actions import Action
+from rasa_core.events import SlotSet
 
-class RestaurantAPI(object):
+class SearchAPI(object):
     def search(self, product, version, keyword):
         print(product)
         print(version)
@@ -13,9 +14,9 @@ class ActionSearch(Action):
 
     def run(self, dispatcher, tracker, domain):
         dispatcher.utter_message("looking for information...")
-        restaurant_api = RestaurantAPI()
-        restaurants = restaurant_api.search(tracker.get_slot("product"),tracker.get_slot("version"),tracker.get_slot("keyword"))
-        return [SlotSet("matches", restaurants)]
+        search_api = SearchAPI()
+        results = search_api.search(tracker.get_slot("product"),tracker.get_slot("version"),tracker.get_slot("keyword"))
+        return [SlotSet("matches", results)]
 
 
 class ActionSuggest(Action):
