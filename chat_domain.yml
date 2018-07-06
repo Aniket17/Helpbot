@@ -3,14 +3,14 @@ slots:
     type: text
   version:
     type: text
-  keyword:
+  keywords:
     type: text
   matches:
     type: unfeaturized
 entities:
     - product
     - version
-    - keyword
+    - keywords
 
 intents:
     - greet

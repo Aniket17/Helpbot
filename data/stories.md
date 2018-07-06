@@ -42,7 +42,7 @@
     - utter_ask_howcanhelp
 * question
     - utter_ask_details
-* inform{"keyword": "role-based access"}
+* inform{"keywords": "role-based access"}
     -utter_ask_product
 * inform{"product": "advance process automation"}
     - slot{"product": "advance process automation"}
@@ -63,7 +63,7 @@
     - utter_ask_howcanhelp
 * question
     - utter_ask_details
-* inform{"keyword": "role-based access"}
+* inform{"keywords": "role-based access"}
     -utter_ask_product
 * inform{"product": "advance process automation"}
     - slot{"product": "advance process automation"}
@@ -198,7 +198,7 @@
     - utter_ask_howcanhelp
 * question
     - utter_ask_details
-* inform{"keyword": "role-based access"}
+* inform{"keywords": "role-based access"}
     -utter_ask_product
 * inform{"product": "advance process automation"}
     - slot{"product": "advance process automation"}
@@ -219,7 +219,7 @@
     - utter_ask_howcanhelp
 * question
     - utter_ask_details
-* inform{"keyword": "role-based access"}
+* inform{"keywords": "role-based access"}
     -utter_ask_product
 * inform{"product": "advance process automation"}
     - slot{"product": "advance process automation"}
@@ -302,8 +302,8 @@
 * greet
     - utter_greet
     - utter_ask_howcanhelp
-* question{"keyword": "    real-time designer encryption library"}
-    - slot{"keyword": "    real-time designer encryption library"}
+* question{"keywords": "    real-time designer encryption library"}
+    - slot{"keywords": "    real-time designer encryption library"}
     - utter_ask_product
 * inform
     - utter_ask_product
@@ -319,8 +319,8 @@
 * deny
     - utter_ack_findalternatives
     - utter_ask_details
-* question{"keyword": "real-time designer encryption library"}
-    - slot{"keyword": "real-time designer encryption library"}
+* question{"keywords": "real-time designer encryption library"}
+    - slot{"keywords": "real-time designer encryption library"}
     - action_search
     - slot{"matches": "Searched completed for - "}
     - action_suggest
@@ -334,8 +334,8 @@
 * greet
     - utter_greet
     - utter_ask_howcanhelp
-* question{"keyword": "    real-time designer encryption library"}
-    - slot{"keyword": "    real-time designer encryption library"}
+* question{"keywords": "    real-time designer encryption library"}
+    - slot{"keywords": "    real-time designer encryption library"}
     - utter_ask_product
 * inform
     - utter_ask_product
@@ -356,8 +356,8 @@
     - utter_ask_didthathelp
 * deny
     - utter_ack_findalternatives
-* question{"keyword": "real-time designer encryption library"}
-    - slot{"keyword": "real-time designer encryption library"}
+* question{"keywords": "real-time designer encryption library"}
+    - slot{"keywords": "real-time designer encryption library"}
     - action_search
     - slot{"matches": "Searched completed for - "}
     - action_suggest
@@ -370,8 +370,8 @@
 * greet
     - utter_greet
     - utter_ask_howcanhelp
-* question{"keyword": "    real-time designer encryption library"}
-    - slot{"keyword": "    real-time designer encryption library"}
+* question{"keywords": "    real-time designer encryption library"}
+    - slot{"keywords": "    real-time designer encryption library"}
     - utter_ask_product
 * inform
     - utter_ask_product

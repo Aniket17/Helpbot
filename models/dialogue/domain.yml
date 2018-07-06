@@ -34,7 +34,7 @@ config:
 entities:
 - product
 - version
-- keyword
+- keywords
 intents:
 - greet
 - affirm
@@ -45,7 +45,7 @@ intents:
 - inform
 - goodbye
 slots:
-  keyword:
+  keywords:
     initial_value: null
     type: rasa_core.slots.TextSlot
   matches:

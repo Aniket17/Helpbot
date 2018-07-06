@@ -36,7 +36,7 @@ class ActionSearch(Action):
     def run(self, dispatcher, tracker, domain):
         dispatcher.utter_message("looking for information...")
         search_api = SearchAPI()
-        results = search_api.search(tracker.get_slot("product"),tracker.get_slot("version"),tracker.get_slot("keyword"))
+        results = search_api.search(tracker.get_slot("product"),tracker.get_slot("version"),tracker.get_slot("keywords"))
         return [SlotSet("matches", results)]
 
 

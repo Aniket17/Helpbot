@@ -2,9 +2,9 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
-        "keyword",
-        "product",
-        "version"
+        "version",
+        "keywords",
+        "product"
       ]
     },
     "utter_goodbye": {
@@ -18,10 +18,10 @@
     "utter_thanks": {
       "slots": []
     },
-    "utter_ask_didthathelp": {
+    "action_suggest": {
       "slots": []
     },
-    "action_suggest": {
+    "utter_ask_didthathelp": {
       "slots": []
     }
   },
