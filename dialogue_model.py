@@ -15,6 +15,6 @@ if __name__ == '__main__':
         dialog_training_data_file,
         augmentation_factor=50,
         epochs=500,
-        batch_size=30,
+        batch_size=20,
         validation_split=0.2)
     agent.persist(path_to_model)

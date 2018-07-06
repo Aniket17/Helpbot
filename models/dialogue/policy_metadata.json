@@ -1,0 +1,38 @@
+{
+  "action_fingerprints": {
+    "action_listen": {
+      "slots": [
+        "keyword",
+        "product",
+        "version"
+      ]
+    },
+    "utter_goodbye": {
+      "slots": []
+    },
+    "action_search": {
+      "slots": [
+        "matches"
+      ]
+    },
+    "utter_thanks": {
+      "slots": []
+    },
+    "utter_ask_didthathelp": {
+      "slots": []
+    },
+    "action_suggest": {
+      "slots": []
+    }
+  },
+  "rasa_core": "0.9.6",
+  "max_histories": [
+    5,
+    5
+  ],
+  "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
+  "policy_names": [
+    "rasa_core.policies.memoization.MemoizationPolicy",
+    "rasa_core.policies.keras_policy.KerasPolicy"
+  ]
+}

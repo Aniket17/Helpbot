@@ -2,7 +2,7 @@ from rasa_core.actions import Action
 from rasa_core.events import SlotSet
 import pyodbc
 
-class DataAPI(object)
+class DataAPI(object):
     def getContext():
         ctx = pyodbc.connect("Driver={SQL Server Native Client 11.0};"
                       "Server=ANIKETD-M93\SQLEXPRESS;"
@@ -19,14 +19,14 @@ class DataAPI(object)
         cursor.execute('SELECT top 1 [link] from FROM [data] where text like "Real-Time Solutions"')
         # for row in cursor:
         #     print('row = %r' % (row,))
-        return cursor[0]
+        return
 
 
 
 class SearchAPI(object):
     def search(self, product, version, keyword):
         data_api = DataAPI()
-        results = data_api.search(product, version, keyword)
+        results = 777
         return results
 
 class ActionSearch(Action):

@@ -1,0 +1,316 @@
+action_factory: null
+action_names:
+- utter_greet
+- utter_goodbye
+- utter_thanks
+- utter_default
+- utter_ack_dosearch
+- utter_ack_findalternatives
+- utter_ask_product
+- utter_ask_howcanhelp
+- utter_ask_version
+- utter_ask_details
+- utter_on_it
+- utter_ask_didthathelp
+- action_search
+- action_suggest
+actions:
+- utter_greet
+- utter_goodbye
+- utter_thanks
+- utter_default
+- utter_ack_dosearch
+- utter_ack_findalternatives
+- utter_ask_product
+- utter_ask_howcanhelp
+- utter_ask_version
+- utter_ask_details
+- utter_on_it
+- utter_ask_didthathelp
+- action.ActionSearch
+- action.ActionSuggest
+config:
+  store_entities_as_slots: true
+entities:
+- product
+- version
+- keyword
+intents:
+- greet
+- affirm
+- deny
+- question
+- thankyou
+- request_info
+- inform
+- goodbye
+slots:
+  keyword:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  matches:
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  product:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  version:
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+templates:
+  utter_ack_dosearch:
+  - text: ok let me see what I can find
+  utter_ack_findalternatives:
+  - text: ok let me see what else there is
+  utter_ask_details:
+  - text: Can you please give details about the what you're looking for?
+  utter_ask_didthathelp:
+  - buttons:
+    - payload: 'yes'
+      title: 'yes'
+    - payload: 'no'
+      title: 'no'
+    text: did that help?
+  utter_ask_howcanhelp:
+  - text: how can I help you?
+  utter_ask_product:
+  - text: which product you are using?
+  utter_ask_version:
+  - text: version?
+  utter_default:
+  - text: default message
+  utter_goodbye:
+  - text: goodbye :(
+  - text: Bye-bye
+  utter_greet:
+  - text: hey there!
+  utter_inform:
+  - text: '-'
+  - text: '"'
+  - text: '6'
+  - text: .
+  - text: '3'
+  - text: '"'
+  - text: ' '
+  - text: '-'
+  - text: '"'
+  - text: '6'
+  - text: .
+  - text: '4'
+  - text: '"'
+  - text: ' '
+  - text: '-'
+  - text: '"'
+  - text: '6'
+  - text: .
+  - text: '5'
+  - text: '"'
+  - text: ' '
+  - text: '-'
+  - text: '"'
+  - text: '6'
+  - text: .
+  - text: '6'
+  - text: '"'
+  - text: ' '
+  - text: '-'
+  - text: '"'
+  - text: '6'
+  - text: .
+  - text: '7'
+  - text: '"'
+  - text: ' '
+  - text: '-'
+  - text: '"'
+  - text: '7'
+  - text: .
+  - text: '0'
+  - text: '"'
+  - text: ' '
+  - text: '-'
+  - text: '"'
+  - text: A
+  - text: P
+  - text: A
+  - text: '"'
+  - text: ' '
+  - text: '-'
+  - text: '"'
+  - text: R
+  - text: T
+  - text: S
+  - text: '"'
+  - text: ' '
+  - text: '-'
+  - text: '"'
+  - text: A
+  - text: d
+  - text: v
+  - text: a
+  - text: n
+  - text: c
+  - text: e
+  - text: ' '
+  - text: P
+  - text: r
+  - text: o
+  - text: c
+  - text: e
+  - text: s
+  - text: s
+  - text: ' '
+  - text: A
+  - text: u
+  - text: t
+  - text: o
+  - text: m
+  - text: a
+  - text: t
+  - text: i
+  - text: o
+  - text: n
+  - text: '"'
+  - text: ' '
+  - text: '-'
+  - text: '"'
+  - text: R
+  - text: e
+  - text: a
+  - text: l
+  - text: '-'
+  - text: T
+  - text: i
+  - text: m
+  - text: e
+  - text: ' '
+  - text: S
+  - text: o
+  - text: l
+  - text: t
+  - text: u
+  - text: i
+  - text: o
+  - text: n
+  - text: s
+  - text: '"'
+  - text: ' '
+  - text: '-'
+  - text: '"'
+  - text: R
+  - text: e
+  - text: a
+  - text: l
+  - text: '-'
+  - text: T
+  - text: i
+  - text: m
+  - text: e
+  - text: ' '
+  - text: S
+  - text: o
+  - text: l
+  - text: u
+  - text: t
+  - text: i
+  - text: o
+  - text: n
+  - text: s
+  - text: '"'
+  - text: ' '
+  - text: '-'
+  - text: '"'
+  - text: R
+  - text: e
+  - text: a
+  - text: l
+  - text: ' '
+  - text: T
+  - text: i
+  - text: m
+  - text: e
+  - text: ' '
+  - text: S
+  - text: o
+  - text: l
+  - text: u
+  - text: t
+  - text: i
+  - text: o
+  - text: n
+  - text: s
+  - text: '"'
+  - text: ' '
+  - text: '-'
+  - text: '"'
+  - text: r
+  - text: e
+  - text: a
+  - text: l
+  - text: ' '
+  - text: t
+  - text: i
+  - text: m
+  - text: e
+  - text: ' '
+  - text: s
+  - text: o
+  - text: l
+  - text: u
+  - text: t
+  - text: i
+  - text: o
+  - text: n
+  - text: s
+  - text: '"'
+  - text: ' '
+  - text: '-'
+  - text: '"'
+  - text: r
+  - text: e
+  - text: a
+  - text: l
+  - text: ' '
+  - text: t
+  - text: i
+  - text: m
+  - text: e
+  - text: ' '
+  - text: s
+  - text: o
+  - text: l
+  - text: u
+  - text: t
+  - text: i
+  - text: o
+  - text: n
+  - text: '"'
+  - text: ' '
+  - text: '-'
+  - text: '"'
+  - text: r
+  - text: e
+  - text: a
+  - text: l
+  - text: '-'
+  - text: t
+  - text: i
+  - text: m
+  - text: e
+  - text: ' '
+  - text: s
+  - text: o
+  - text: l
+  - text: u
+  - text: t
+  - text: i
+  - text: o
+  - text: n
+  - text: '"'
+  utter_on_it:
+  - text: I'm on it
+  utter_thanks:
+  - text: Thanks
+  - text: Thank you
+  - text: Perfect!
+  - text: YOLO!
+topics: []
