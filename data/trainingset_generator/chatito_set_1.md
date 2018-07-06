@@ -3,17 +3,17 @@
     ~[find?] @[keywords] ~[relatedto?] @[product] ~[infor?] @[version]
     ~[greet?],~[find?] @[keywords] ~[relatedto?] @[product] ~[infor?] @[version]
     @[keywords] ~[relatedto?] @[product] ~[infor?] @[version]
-    @[keywords]
     @[product]
     @[product] @[version]
     @[keywords] ~[relatedto?] @[product] ~[infor?] @[version]
     @[keywords] ~[relatedto?] @[product]
     @[keywords] ~[relatedto?] @[product] @[version]
-%[inform](123)
+%[inform](2000)
     @[product] with @[version]
     @[version] of @[product]
     @[version]
     @[product]
+    @[keywords]
 %[greet](123)
     ~[greet?]
     ~[greet?] ~[greet?]
@@ -23,6 +23,12 @@
 %[deny](123)
     ~[deny?]
     ~[deny?] ~[deny?]
+%[thanks](123)
+    ~[thanks?]
+    ~[thanks?] ~[thanks?]
+%[affirm](123)
+    ~[affirm?]
+    ~[affirm?] ~[affirm?]
 
 ~[find]
     find
@@ -1619,3 +1625,44 @@
     whats wrong with u
     wrong results
     no
+~[thanks]
+    thanks
+    thankie
+    thanks alot
+    thank you
+    nice
+    nice job
+    very good
+    thanks a ton
+    thank you mate
+    you are good bot
+    best bot you are
+~[affirm]
+    wow
+    you're right
+    thats correct
+    you are awesome
+    perfect
+    right
+    indeed
+    yes
+    yep
+    correct
+    yup
+    sounds good
+    sounds correct
+    thats good
+    i am good
+    im ok
+    ok
+    cool
+    sounds good
+~[fun]
+    funny
+    stupid
+    asshole
+    bad
+    shit
+    shitty
+    garbage
+    bitch
