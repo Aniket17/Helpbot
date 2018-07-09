@@ -34,7 +34,7 @@
     - utter_thanks
 * affirm
     - utter_goodbye
-    - export
+    
 
 ## Generated Story doesnt give any info
 * greet
@@ -56,7 +56,7 @@
     - utter_thanks
 * affirm
     - utter_goodbye
-    - export
+    
 
 * greet
     - utter_greet
@@ -77,7 +77,7 @@
     - utter_thanks
 * affirm
     - utter_goodbye
-    - export
+    
 
 ## Generated Story gives product
 * greet
@@ -95,7 +95,7 @@
     - utter_thanks
 * affirm
     - utter_goodbye
-    - export
+    
 
 ## Generated Story gives product
 * greet
@@ -113,7 +113,7 @@
     - utter_thanks
 * affirm
     - utter_goodbye
-    - export
+    
 
 ## story_00914561a
 * greet
@@ -135,7 +135,7 @@
     - utter_thanks
 * affirm
     - utter_goodbye
-    - export
+    
 ## story_00914561b
 * greet
     - utter_greet
@@ -159,7 +159,7 @@
     - utter_thanks
     - action_search
     - action_suggest
-    - export
+    
 
 ## Generated Story -207927580169185512a
 * greet
@@ -190,7 +190,7 @@
     - utter_thanks
 * affirm
     - utter_goodbye
-    - export
+    
 
 ## Generated Story doesnt give any info
 * greet
@@ -212,7 +212,7 @@
     - utter_thanks
 * affirm
     - utter_goodbye
-    - export
+    
 ##ahska
 * greet
     - utter_greet
@@ -242,7 +242,7 @@
     - utter_thanks
 * affirm
     - utter_goodbye
-    - export
+    
     
 ## Generated Story gives productaa
 * greet
@@ -269,7 +269,7 @@
     - utter_thanks
 * affirm
     - utter_goodbye
-    - export
+    
 
 ## Generated Story gives producta
 * greet
@@ -296,7 +296,7 @@
     - utter_thanks
 * affirm
     - utter_goodbye
-    - export
+    
 
     ## Generated Story 9210148969756518405
 * greet
@@ -326,7 +326,7 @@
     - action_suggest
 * affirm
     - utter_thanks
-    - export
+    
 
 
 
@@ -363,7 +363,7 @@
     - action_suggest
 * affirm
     - utter_thanks
-    - export
+    
 
 
 ## Generated Story 92101489697565184056
@@ -392,5 +392,98 @@
     - utter_ask_didthathelp
 * affirm
     - utter_thanks
-    - export
+    
+## Generated Story 1773384704584200681
+* greet
+    - utter_greet
+    - utter_ask_howcanhelp
+* question{"keywords": "installation kit contents", "product": "real time solutions"}
+    - slot{"keywords": "installation kit contents"}
+    - slot{"product": "real time solutions"}
+    - utter_ask_version
+* question{"version": "6.7"}
+    - slot{"version": "6.7"}
+    - action_search
+    - slot{"matches": 777}
+    - action_suggest
 
+## Generated Story -4853622996862159190
+* greet
+    - utter_greet
+    - utter_ask_howcanhelp
+* inform{"keywords": "updating the cognos model"}
+    - slot{"keywords": "updating the cognos model"}
+    - utter_ask_product
+* inform{"product": "real time solutions"}
+    - slot{"product": "real time solutions"}
+    - utter_ask_version
+* question{"version": "6.7"}
+    - slot{"version": "6.7"}
+    - action_search
+    - slot{"matches": 777}
+    - action_suggest
+    - utter_ask_didthathelp
+* affirm
+    - utter_thanks
+    - utter_goodbye
+    
+
+
+## Generated Story 5571930640337406942
+* greet
+    - utter_greet
+    - utter_ask_howcanhelp
+* question{"keywords": "configuring and running the watchdog.exe file"}
+    - slot{"keywords": "configuring and running the watchdog.exe file"}
+    - utter_ask_product
+* inform{"product": "apa"}
+    - slot{"product": "apa"}
+    - utter_ask_version
+    - utter_ask_version
+* question{"version": "6.7"}
+    - slot{"version": "6.7"}
+    - action_search
+    - slot{"matches": 777}
+    - action_suggest
+    - utter_ask_didthathelp
+* deny
+    - utter_ack_findalternatives
+    - utter_ask_details
+* inform{"keywords": "testing the data source"}
+    - slot{"keywords": "testing the data source"}
+    - action_search
+    - slot{"matches": 777}
+    - action_suggest
+    - utter_ask_didthathelp
+* affirm
+    -utter_thanks
+## Generated Story -8831942923219871168
+* greet
+    - utter_ask_howcanhelp
+* question{"keywords": "what is openam"}
+    - slot{"keywords": "what is openam"}
+    - utter_ask_product
+* question{"product": "apa"}
+    - slot{"product": "apa"}
+    - utter_ask_version
+* question{"version": "6.7"}
+    - slot{"version": "6.7"}
+    - action_search
+    - slot{"matches": 777}
+    - action_suggest
+* inform
+    - utter_ask_didthathelp
+* deny
+    - utter_ack_findalternatives
+    - utter_ask_details
+* inform{"keywords": "openam"}
+    - slot{"keywords": "openam"}
+    - action_search
+    - slot{"matches": 777}
+    - action_suggest
+    - utter_ask_didthathelp
+* affirm
+    - utter_thanks
+* goodbye
+    - utter_goodbye
+    - export
