@@ -16,8 +16,8 @@ class ActionSearch(Action):
         dispatcher.utter_message("looking for information...")
         search_api = SearchAPI()
         results = search_api.search(tracker.get_slot("product"),tracker.get_slot("version"),tracker.get_slot("keywords"))
+        print(results)
         return [SlotSet("matches", results)]
-
 
 class ActionSuggest(Action):
     def name(self):
@@ -25,6 +25,20 @@ class ActionSuggest(Action):
 
     def run(self, dispatcher, tracker, domain):
         dispatcher.utter_message("here's what I found:")
-        print(tracker.get_slot("matches"))
-        dispatcher.utter_message("is it ok for you? ")
+        result = self.convertToLink(tracker.get_slot("matches"))
+        print(result)
         return []
+    def convertToLink(self,matches):
+        result = []
+        print(matches)
+        for m in matches:
+            try:
+                link = "<a href='{0}'>{1}</a>".format(m.text,m.link)
+                result.append(link)
+                pass
+            except Exception as identifier:
+                print(identifier)
+                print(m)
+                pass
+        return result
+

@@ -1,6 +1,7 @@
 import pyodbc
 import nltk
 from difflib import SequenceMatcher
+import copy
 
 class DataAPI(object):
     data = []
@@ -35,8 +36,7 @@ class DataAPI(object):
             self.data.append(obj)
     
     def search(self, product, version, keyword):    
-        matches = []
-        self.getMatches(product, version,keyword)
+        matches = self.getMatches(product, version,keyword)
         # search in text
         print(matches)
         return matches
@@ -45,18 +45,18 @@ class DataAPI(object):
         tokens = nltk.word_tokenize(sentence)
         tagged = nltk.pos_tag(tokens)
         n_tags = [t[0] for t in tagged if t[1].startswith("N")]
-        print(n_tags)
         if(len(n_tags)<=0):
             return
-        input_str = n_tags[0]
+        input_str = " ".join(n_tags)
+        print(input_str)
         filtered_data = []
         for record in self.data:
             db_str = record["text"]
-            rank = SequenceMatcher(lambda x: x == " ",input_str,db_str).ratio()
-            if(rank >= 0.5):
-                rec = record
+            rank = round(SequenceMatcher(lambda x: x == " ",input_str,db_str).ratio()*10)
+            if(rank >= 4):
+                rec = copy.deepcopy(record)
                 rec["rank"] = rank
-                filtered_data.append(rec)    
+                filtered_data.append(rec)
         if(len(filtered_data) == 0 ):
             return []
         matches = sorted(filtered_data, key=lambda record: record['rank'], reverse=True)
@@ -67,5 +67,5 @@ class DataAPI(object):
 if __name__ == '__main__':
     #train('./data/training_data/', './config/config.yml', './models/nlu')
     api = DataAPI()
-    matches = api.getMatches('','','remove openam from rts 7.0"')
+    matches = api.getMatches('','','Real-Time Solutions Installation Files"')
     print(matches)
