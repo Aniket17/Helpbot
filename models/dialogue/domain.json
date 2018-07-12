@@ -4,7 +4,7 @@
     "intent_affirm",
     "intent_deny",
     "intent_question",
-    "intent_thankyou",
+    "intent_thanks",
     "intent_request_info",
     "intent_inform",
     "intent_goodbye",

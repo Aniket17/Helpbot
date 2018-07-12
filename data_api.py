@@ -38,7 +38,6 @@ class DataAPI(object):
     def search(self, product, version, keyword):    
         matches = self.getMatches(product, version,keyword)
         # search in text
-        print(matches)
         return matches
 
     def getMatches(self,product,version,sentence):
@@ -48,7 +47,7 @@ class DataAPI(object):
         if(len(n_tags)<=0):
             return
         input_str = " ".join(n_tags)
-        print(input_str)
+        print("tags"+input_str)
         filtered_data = []
         for record in self.data:
             db_str = record["text"]

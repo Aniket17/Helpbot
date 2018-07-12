@@ -40,7 +40,7 @@ intents:
 - affirm
 - deny
 - question
-- thankyou
+- thanks
 - request_info
 - inform
 - goodbye
