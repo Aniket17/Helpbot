@@ -23,7 +23,6 @@ class ActionSearch(Action):
         print(version)
         print(keywords)
         results = search_api.search(product, version, keywords)
-        print(matches)
         return [SlotSet("matches", results)]
 
 class ActionSuggest(Action):
