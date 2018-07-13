@@ -33,11 +33,12 @@ class DataAPI(object):
             obj['text'] = row[1]
             obj['link'] = row[2]
             obj['parent'] = row[3]
+            obj['version'] = row[4]
             self.data.append(obj)
     
     def search(self, product, version, keyword):    
         matches = self.getMatches(product, version,keyword)
-        # search in text
+        # check for version
         return matches
 
     def getMatches(self,product,version,sentence):
@@ -50,7 +51,7 @@ class DataAPI(object):
         print("tags"+input_str)
         filtered_data = []
         for record in self.data:
-            db_str = record["text"]
+            db_str = record["text"]               
             rank = round(SequenceMatcher(lambda x: x == " ",input_str,db_str).ratio()*10)
             if(rank >= 4):
                 rec = copy.deepcopy(record)
