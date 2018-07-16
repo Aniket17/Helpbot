@@ -37,7 +37,7 @@ class SimpleWebBot(HttpInputComponent):
                 if(b.detect_language() == 'mt'):
                     return jsonify(["Please try to form an understandable sentence"])
                 if(b.detect_language() != 'en'):
-                    return jsonify(["Please type an understandable statement. I can only understand english!"])
+                    return jsonify(["I am sorry but I only understand English! I am a quick lerner and learning other languages!"])
             out = CollectingOutputChannel()
             on_new_message(UserMessage(text, out, sender_id))
             responses = [m["text"] for m in out.messages]
