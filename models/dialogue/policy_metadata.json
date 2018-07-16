@@ -2,9 +2,9 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
+        "product",
         "version",
-        "keywords",
-        "product"
+        "keywords"
       ]
     },
     "action_restart": {
@@ -14,12 +14,9 @@
       "slots": [
         "matches"
       ]
-    },
-    "utter_goodbye": {
-      "slots": []
     }
   },
-  "rasa_core": "0.9.6",
+  "rasa_core": "0.9.8",
   "max_histories": [
     5,
     5
