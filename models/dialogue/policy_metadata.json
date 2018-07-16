@@ -3,14 +3,11 @@
     "action_listen": {
       "slots": [
         "product",
-        "version",
-        "keywords"
+        "keywords",
+        "version"
       ]
     },
     "action_restart": {
-      "slots": []
-    },
-    "action_suggest": {
       "slots": []
     },
     "action_search": {

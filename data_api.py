@@ -41,16 +41,16 @@ class DataAPI(object):
     def getMatches(self,product,version,sentence):
         tokens = nltk.word_tokenize(sentence)
         tagged = nltk.pos_tag(tokens)
-        n_tags = [t[0] for t in tagged if t[1].startswith("N")]
+        n_tags = [t[0] for t in tagged ]#if t[1].startswith("N")]
         if(len(n_tags)<=0):
             return
         input_str = " ".join(n_tags)
-        print("tags"+input_str)
+        print("tags*****************************"+input_str)
         filtered_data = []
         for record in self.data:
             db_str = record["text"]               
             rank = round(SequenceMatcher(lambda x: x == " ",input_str,db_str).ratio()*10)
-            if(rank >= 4):
+            if(rank >= 5):
                 rec = copy.deepcopy(record)
                 rec["rank"] = rank
                 filtered_data.append(rec)

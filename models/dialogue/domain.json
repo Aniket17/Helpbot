@@ -27,8 +27,11 @@
     "prev_utter_ask_version",
     "prev_utter_ask_details",
     "prev_utter_on_it",
+    "prev_utter_anything_else",
     "prev_utter_ask_didthathelp",
     "prev_action_search",
-    "prev_action_suggest"
+    "prev_action_suggest",
+    "prev_utter_unstructured_garbage",
+    "prev_utter_structured_garbage"
   ]
 }

@@ -21,6 +21,10 @@ class ActionSearch(Action):
         print(product)
         print(version)
         print(keywords)
+        if(product == None and keywords == None):
+            return
+        if(product != None and keywords == None):
+            return
         results = search_api.search(product, version, keywords)
         return [SlotSet("matches", results)]
 
@@ -33,6 +37,17 @@ class ActionSuggest(Action):
         version = tracker.get_slot("version")
         keywords = tracker.get_slot("keywords")
         matches = tracker.get_slot("matches")
+        if(product == None and keywords == None):
+            dispatcher.utter_template("utter_no_keywords")
+            dispatcher.utter_template("utter_structured_garbage")
+            return
+        if(product != None and keywords == None):
+            dispatcher.utter_template("utter_product_page")
+            dispatcher.utter_template("utter_structured_garbage")
+            return
+        if(matches == None or len(matches) == 0):
+            dispatcher.utter_template("utter_no_keywords")
+            return
         result = []
         print(product)
         print(version)
@@ -43,12 +58,12 @@ class ActionSuggest(Action):
             filtered = [x for x in matches if  x["version"] == version]
             if(len(filtered) == 0):
                 wrong_version = True
-                dispatcher.utter_message("I could not find {keywords} for {product} in {version}".format(**locals()))
+                dispatcher.utter_message("I could not find '{keywords}' for '{product}' in '{version}'".format(**locals()))
             else:
                 result = self.convertToLink(filtered)
         if(len(result) == 0):
             if(wrong_version != None and wrong_version == True):
-                dispatcher.utter_message("This is what I could found for different versions.. :")
+                dispatcher.utter_message("This is what I could find for other versions.. :")
             result = self.convertToLink(tracker.get_slot("matches"))
         response = json.dumps(result)
         dispatcher.utter_message(response)

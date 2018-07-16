@@ -11,9 +11,12 @@ action_names:
 - utter_ask_version
 - utter_ask_details
 - utter_on_it
+- utter_anything_else
 - utter_ask_didthathelp
 - action_search
 - action_suggest
+- utter_unstructured_garbage
+- utter_structured_garbage
 actions:
 - utter_greet
 - utter_goodbye
@@ -26,9 +29,12 @@ actions:
 - utter_ask_version
 - utter_ask_details
 - utter_on_it
+- utter_anything_else
 - utter_ask_didthathelp
 - action.ActionSearch
 - action.ActionSuggest
+- utter_unstructured_garbage
+- utter_structured_garbage
 config:
   store_entities_as_slots: true
 entities:
@@ -59,9 +65,12 @@ slots:
     type: rasa_core.slots.TextSlot
 templates:
   utter_ack_dosearch:
-  - text: ok let me see what I can find
+  - text: Alright! Let me look for the information on extranice.
+  - text: Alright! Looking for information on extrancie. Give me a few moments.
   utter_ack_findalternatives:
-  - text: ok let me see what else there is
+  - text: OK! Let me see what else can be found.
+  utter_anything_else:
+  - text: Is there anything else I can help you with?
   utter_ask_details:
   - text: Can you please give details about the what you're looking for?
   utter_ask_didthathelp:
@@ -70,247 +79,49 @@ templates:
       title: 'yes'
     - payload: 'no'
       title: 'no'
-    text: did that help?
+    text: Was that helpful?
   utter_ask_howcanhelp:
-  - text: how can I help you?
+  - text: How can I help you?
   utter_ask_product:
-  - text: which product you are using?
+  - buttons:
+    - payload: APA
+      title: APA (Advance Process Automation)
+    - payload: RTS
+      title: Real-Time Solutions
+    text: Which product are you using?
   utter_ask_version:
-  - text: version?
+  - text: Which version?
+  - text: For which version?
+  - text: Version?
   utter_default:
   - text: default message
   utter_goodbye:
-  - text: goodbye :(
-  - text: Bye-bye
+  - text: Thank you for visiting extranice. Have a good day.
+  - text: I hope I could help you. Thank you for visiting extranice. Have a good day.
   utter_greet:
-  - text: hey there!
-  utter_inform:
-  - text: '-'
-  - text: '"'
-  - text: '6'
-  - text: .
-  - text: '3'
-  - text: '"'
-  - text: ' '
-  - text: '-'
-  - text: '"'
-  - text: '6'
-  - text: .
-  - text: '4'
-  - text: '"'
-  - text: ' '
-  - text: '-'
-  - text: '"'
-  - text: '6'
-  - text: .
-  - text: '5'
-  - text: '"'
-  - text: ' '
-  - text: '-'
-  - text: '"'
-  - text: '6'
-  - text: .
-  - text: '6'
-  - text: '"'
-  - text: ' '
-  - text: '-'
-  - text: '"'
-  - text: '6'
-  - text: .
-  - text: '7'
-  - text: '"'
-  - text: ' '
-  - text: '-'
-  - text: '"'
-  - text: '7'
-  - text: .
-  - text: '0'
-  - text: '"'
-  - text: ' '
-  - text: '-'
-  - text: '"'
-  - text: A
-  - text: P
-  - text: A
-  - text: '"'
-  - text: ' '
-  - text: '-'
-  - text: '"'
-  - text: R
-  - text: T
-  - text: S
-  - text: '"'
-  - text: ' '
-  - text: '-'
-  - text: '"'
-  - text: A
-  - text: d
-  - text: v
-  - text: a
-  - text: n
-  - text: c
-  - text: e
-  - text: ' '
-  - text: P
-  - text: r
-  - text: o
-  - text: c
-  - text: e
-  - text: s
-  - text: s
-  - text: ' '
-  - text: A
-  - text: u
-  - text: t
-  - text: o
-  - text: m
-  - text: a
-  - text: t
-  - text: i
-  - text: o
-  - text: n
-  - text: '"'
-  - text: ' '
-  - text: '-'
-  - text: '"'
-  - text: R
-  - text: e
-  - text: a
-  - text: l
-  - text: '-'
-  - text: T
-  - text: i
-  - text: m
-  - text: e
-  - text: ' '
-  - text: S
-  - text: o
-  - text: l
-  - text: t
-  - text: u
-  - text: i
-  - text: o
-  - text: n
-  - text: s
-  - text: '"'
-  - text: ' '
-  - text: '-'
-  - text: '"'
-  - text: R
-  - text: e
-  - text: a
-  - text: l
-  - text: '-'
-  - text: T
-  - text: i
-  - text: m
-  - text: e
-  - text: ' '
-  - text: S
-  - text: o
-  - text: l
-  - text: u
-  - text: t
-  - text: i
-  - text: o
-  - text: n
-  - text: s
-  - text: '"'
-  - text: ' '
-  - text: '-'
-  - text: '"'
-  - text: R
-  - text: e
-  - text: a
-  - text: l
-  - text: ' '
-  - text: T
-  - text: i
-  - text: m
-  - text: e
-  - text: ' '
-  - text: S
-  - text: o
-  - text: l
-  - text: u
-  - text: t
-  - text: i
-  - text: o
-  - text: n
-  - text: s
-  - text: '"'
-  - text: ' '
-  - text: '-'
-  - text: '"'
-  - text: r
-  - text: e
-  - text: a
-  - text: l
-  - text: ' '
-  - text: t
-  - text: i
-  - text: m
-  - text: e
-  - text: ' '
-  - text: s
-  - text: o
-  - text: l
-  - text: u
-  - text: t
-  - text: i
-  - text: o
-  - text: n
-  - text: s
-  - text: '"'
-  - text: ' '
-  - text: '-'
-  - text: '"'
-  - text: r
-  - text: e
-  - text: a
-  - text: l
-  - text: ' '
-  - text: t
-  - text: i
-  - text: m
-  - text: e
-  - text: ' '
-  - text: s
-  - text: o
-  - text: l
-  - text: u
-  - text: t
-  - text: i
-  - text: o
-  - text: n
-  - text: '"'
-  - text: ' '
-  - text: '-'
-  - text: '"'
-  - text: r
-  - text: e
-  - text: a
-  - text: l
-  - text: '-'
-  - text: t
-  - text: i
-  - text: m
-  - text: e
-  - text: ' '
-  - text: s
-  - text: o
-  - text: l
-  - text: u
-  - text: t
-  - text: i
-  - text: o
-  - text: n
-  - text: '"'
+  - text: Hi.
+  - text: Hi, I am helpbot. I am here to help you reach the right content in extranice.
+      Tell me, how can I help you today?
+  - text: Hi, I am helpbot. I am here to help you with navigation in extranice. How
+      can I help you today?
+  utter_no_keywords:
+  - text: I am sorry, but I could not identify any keywords related to NICE products
+      in your statement. Please rephrase the statement with keywords from the product.
+      For e.g. toolname, module name, etc.
   utter_on_it:
-  - text: I'm on it
+  - text: Looking for information.
+  utter_product_page:
+  - text: APA or Advanced Process Automation is robotic process automation product
+      offering from nice which automates manual desktop tasks. For more information,
+      click https://www.nice.com/websites/rpa/ and for information from Nice product
+      user help, type your question.
+  utter_structured_garbage:
+  - text: I am afraid that my current abilities are limited to answering questions
+      about Nice products only. Please ask me questions related to Nice products.
   utter_thanks:
-  - text: Thanks
+  - text: Thanks!
   - text: Thank you
-  - text: Perfect!
-  - text: YOLO!
+  utter_unstructured_garbage:
+  - text: Please type an understandable statement
+  - text: Please try to form an understandable sentence
 topics: []

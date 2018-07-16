@@ -13,6 +13,7 @@ from rasa_core.channels.channel import UserMessage
 from rasa_core.channels.direct import CollectingOutputChannel
 from rasa_core.channels.rest import HttpInputComponent
 from flask import Blueprint, request, jsonify
+from textblob import TextBlob
 
 logger = logging.getLogger(__name__)
 class SimpleWebBot(HttpInputComponent):
@@ -30,11 +31,17 @@ class SimpleWebBot(HttpInputComponent):
             payload = request.json
             sender_id = payload.get("sender", None)
             text = payload.get("message", None)
+            if(len(text)>=3 and (text != 'APA' or text != 'RTS')):
+                b = TextBlob(text)
+                print(b.detect_language())
+                if(b.detect_language() == 'mt'):
+                    return jsonify(["Please try to form an understandable sentence"])
+                if(b.detect_language() != 'en'):
+                    return jsonify(["Please type an understandable statement. I can only understand english!"])
             out = CollectingOutputChannel()
             on_new_message(UserMessage(text, out, sender_id))
             responses = [m["text"] for m in out.messages]
             return jsonify(responses)
-    
         return custom_webhook
 
 def run(serve_forever=True):

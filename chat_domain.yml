@@ -24,55 +24,57 @@ intents:
 
 templates:
   utter_greet:
-    - "hey there!"
+    - "Hi."
+    - "Hi, I am helpbot. I am here to help you reach the right content in extranice. Tell me, how can I help you today?"
+    - "Hi, I am helpbot. I am here to help you with navigation in extranice. How can I help you today?"
   utter_goodbye:
-    - "goodbye :("
-    - "Bye-bye"
+    - "Thank you for visiting extranice. Have a good day."
+    - "I hope I could help you. Thank you for visiting extranice. Have a good day."
   utter_thanks:
-    - "Thanks"
+    - "Thanks!"
     - "Thank you"
-    - "Perfect!"
-    - "YOLO!"
-
   utter_default:
     - "default message"
   utter_ack_dosearch: 
-    - "ok let me see what I can find"
+    - "Alright! Let me look for the information on extranice."
+    - "Alright! Looking for information on extrancie. Give me a few moments."
   utter_ack_findalternatives:
-    - "ok let me see what else there is"
+    - "OK! Let me see what else can be found."
   utter_ask_didthathelp:
-    - text: "did that help?"
+    - text: "Was that helpful?"
       buttons:
         - title: "yes"
           payload: "yes"
         - title: "no"
           payload: "no"
   utter_ask_product: 
-    - "which product you are using?"
+    - text: "Which product are you using?"
+      buttons:
+        - title: "APA (Advance Process Automation)"
+          payload: "APA"
+        - title: "Real-Time Solutions"
+          payload: "RTS"
   utter_ask_howcanhelp:
-    - "how can I help you?"
+    - "How can I help you?"
   utter_ask_version:
-    - "version?"
+    - "Which version?"
+    - "For which version?"
+    - "Version?"
   utter_ask_details:
     - "Can you please give details about the what you're looking for?"
-  utter_inform:
-    -"6.3"
-    -"6.4"
-    -"6.5"
-    -"6.6"
-    -"6.7"
-    -"7.0"
-    -"APA"
-    -"RTS"
-    -"Advance Process Automation"
-    -"Real-Time Soltuions"
-    -"Real-Time Solutions"
-    -"Real Time Solutions"
-    -"real time solutions"
-    -"real time solution"
-    -"real-time solution"
   utter_on_it: 
-    - "I'm on it"
+    - "Looking for information."
+  utter_no_keywords:
+    - "I am sorry, but I could not identify any keywords related to NICE products in your statement. Please rephrase the statement with keywords from the product. For e.g. toolname, module name, etc."
+  utter_unstructured_garbage:
+    - "Please type an understandable statement"
+    - "Please try to form an understandable sentence"
+  utter_structured_garbage:
+    - "I am afraid that my current abilities are limited to answering questions about Nice products only. Please ask me questions related to Nice products."   
+  utter_product_page:
+    - "APA or Advanced Process Automation is robotic process automation product offering from nice which automates manual desktop tasks. For more information, click https://www.nice.com/websites/rpa/ and for information from Nice product user help, type your question."
+  utter_anything_else:
+    - "Is there anything else I can help you with?"
 
 actions:
 - utter_greet
@@ -86,6 +88,9 @@ actions:
 - utter_ask_version
 - utter_ask_details
 - utter_on_it
+- utter_anything_else
 - utter_ask_didthathelp
 - action.ActionSearch
 - action.ActionSuggest
+- utter_unstructured_garbage
+- utter_structured_garbage
