@@ -9,10 +9,7 @@ class DataAPI(object):
     def __init__(self):
         self.initData()
     def getContext(self):
-        ctx = pyodbc.connect("Driver={SQL Server Native Client 11.0};"
-                      "Server=ANIKETD-M93\SQLEXPRESS;"
-                      "Database=Scrapper.Importer.Context.ScrapperContext;"
-                      "Trusted_Connection=yes;")
+        ctx = pyodbc.connect("Driver={SQL Server Native Client 11.0};Server=Aniketd-m93\SQLEXPRESS;Database=Scrapper.Importer.Context.ScrapperContext;Trusted_Connection=yes;")
         return ctx
     
     def getCursor(self,ctx):

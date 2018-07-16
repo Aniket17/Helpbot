@@ -2,26 +2,12 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
+        "version",
         "product",
-        "keywords",
-        "version"
+        "keywords"
       ]
     },
-    "action_search": {
-      "slots": [
-        "matches"
-      ]
-    },
-    "utter_thanks": {
-      "slots": []
-    },
-    "utter_goodbye": {
-      "slots": []
-    },
-    "action_suggest": {
-      "slots": []
-    },
-    "utter_ask_didthathelp": {
+    "action_restart": {
       "slots": []
     }
   },
