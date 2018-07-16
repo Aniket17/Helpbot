@@ -255,8 +255,7 @@
 ## Generated Story 6347966984759475914
 * question
     - utter_ask_howcanhelp
-* question{"keywords": "asked who"}
-    - slot{"keywords": "asked who"}
+* question
     - utter_ask_details
 * question{"keywords": "configure application policies ?"}
     - slot{"keywords": "configure application policies ?"}
@@ -289,8 +288,7 @@
 ## Generated Story 63479669847594759129
 * question
     - utter_ask_howcanhelp
-* question{"keywords": "asked who"}
-    - slot{"keywords": "asked who"}
+* question
     - utter_ask_details
 * question{"keywords": "configure application policies ?"}
     - slot{"keywords": "configure application policies ?"}
@@ -481,4 +479,37 @@
     - utter_anything_else
 * thanks
     - utter_goodbye
-    - export
+    - action_restart
+
+## Generated Story 308663065766999905
+* greet
+    - utter_greet
+* question{"product": "apa"}
+    - slot{"product": "apa"}
+    - utter_product_page
+* affirm
+    - utter_thanks
+    - utter_ask_howcanhelp
+* question{"keywords": "assign a solution to a team?"}
+    - slot{"keywords": "assign a solution to a team?"}
+    - action_search
+    - action_suggest
+    - utter_ask_didthathelp
+* deny
+    - utter_ack_findalternatives
+    - utter_ask_version
+* inform{"version": "6.5"}
+    - slot{"version": "6.5"}
+    - utter_ask_details
+* question{"keywords": "manually assigning solution to a team"}
+    - slot{"keywords": "manually assigning solution to a team"}
+    - action_search
+    - action_suggest
+    - utter_ask_didthathelp
+* thanks
+    - utter_thanks
+    - utter_anything_else
+* deny
+    - utter_goodbye
+    - action_restart
+

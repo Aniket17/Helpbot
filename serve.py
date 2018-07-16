@@ -31,7 +31,7 @@ class SimpleWebBot(HttpInputComponent):
             payload = request.json
             sender_id = payload.get("sender", None)
             text = payload.get("message", None)
-            if(len(text)>=3 and (text != 'apa' or text != 'rts')):
+            if(len(text)>=3 and 'apa' not in text and 'rts' not in text):
                 b = TextBlob(text)
                 print(b.detect_language())
                 if(b.detect_language() == 'mt'):
