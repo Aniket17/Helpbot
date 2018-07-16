@@ -2,12 +2,23 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
-        "version",
         "product",
+        "version",
         "keywords"
       ]
     },
     "action_restart": {
+      "slots": []
+    },
+    "action_suggest": {
+      "slots": []
+    },
+    "action_search": {
+      "slots": [
+        "matches"
+      ]
+    },
+    "utter_goodbye": {
       "slots": []
     }
   },
