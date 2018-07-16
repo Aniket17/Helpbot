@@ -17,6 +17,7 @@ action_names:
 - action_suggest
 - utter_unstructured_garbage
 - utter_structured_garbage
+- utter_product_page
 actions:
 - utter_greet
 - utter_goodbye
@@ -35,6 +36,7 @@ actions:
 - action.ActionSuggest
 - utter_unstructured_garbage
 - utter_structured_garbage
+- utter_product_page
 config:
   store_entities_as_slots: true
 entities:
@@ -99,7 +101,8 @@ templates:
   - text: Thank you for visiting extranice. Have a good day.
   - text: I hope I could help you. Thank you for visiting extranice. Have a good day.
   utter_greet:
-  - text: Hi.
+  - text: Hi. I am helpbot and you can ask me anything about NICE products. How can
+      I help you?
   - text: Hi, I am helpbot. I am here to help you reach the right content in extranice.
       Tell me, how can I help you today?
   - text: Hi, I am helpbot. I am here to help you with navigation in extranice. How

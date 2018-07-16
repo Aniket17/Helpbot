@@ -24,7 +24,7 @@ intents:
 
 templates:
   utter_greet:
-    - "Hi."
+    - "Hi. I am helpbot and you can ask me anything about NICE products. How can I help you?"
     - "Hi, I am helpbot. I am here to help you reach the right content in extranice. Tell me, how can I help you today?"
     - "Hi, I am helpbot. I am here to help you with navigation in extranice. How can I help you today?"
   utter_goodbye:
@@ -94,3 +94,4 @@ actions:
 - action.ActionSuggest
 - utter_unstructured_garbage
 - utter_structured_garbage
+- utter_product_page

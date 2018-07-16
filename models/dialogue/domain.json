@@ -32,6 +32,7 @@
     "prev_action_search",
     "prev_action_suggest",
     "prev_utter_unstructured_garbage",
-    "prev_utter_structured_garbage"
+    "prev_utter_structured_garbage",
+    "prev_utter_product_page"
   ]
 }

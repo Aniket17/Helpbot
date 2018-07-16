@@ -2,9 +2,9 @@
   "action_fingerprints": {
     "action_listen": {
       "slots": [
-        "product",
+        "version",
         "keywords",
-        "version"
+        "product"
       ]
     },
     "action_restart": {

@@ -74,4 +74,3 @@ class ActionSuggest(Action):
             link = "<li><a href='{1}'>{0} - Version {2}</a></li>".format(m["text"],m["link"],m["version"])
             result.append(link)
         return result
-
