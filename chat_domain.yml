@@ -33,6 +33,8 @@ templates:
   utter_thanks:
     - "Thanks!"
     - "Thank you"
+  utter_welcome:
+    - "You are welcome!"
   utter_default:
     - "default message"
   utter_ack_dosearch: 
