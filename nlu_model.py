@@ -33,5 +33,5 @@ def run():
 #     return agent
 
 if __name__ == '__main__':
-    #train('./data/training_data/', './config/config.yml', './models/nlu')
-    run()
+    train('./data/training_data/', './config/config.yml', './models/nlu')
+    #run()
