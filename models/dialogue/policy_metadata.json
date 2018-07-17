@@ -7,16 +7,16 @@
         "keywords"
       ]
     },
-    "action_restart": {
-      "slots": []
-    },
     "action_search": {
       "slots": [
         "matches"
       ]
+    },
+    "action_restart": {
+      "slots": []
     }
   },
-  "rasa_core": "0.9.8",
+  "rasa_core": "0.9.6",
   "max_histories": [
     5,
     5

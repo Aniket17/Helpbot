@@ -1,19 +1,21 @@
 
-%[question](100000)
+%[question](50000)
     ~[find?] @[keywords] ~[relatedto?] @[product] ~[infor?] @[version]
     ~[greet?],~[find?] @[keywords] ~[relatedto?] @[product] ~[infor?] @[version]
     @[keywords] ~[relatedto?] @[product] ~[infor?] @[version]
-    @[product]
-    @[product] @[version]
     @[keywords] ~[relatedto?] @[product] ~[infor?] @[version]
     @[keywords] ~[relatedto?] @[product]
     @[keywords] ~[relatedto?] @[product] @[version]
-%[inform](2000)
+    ~[find?] @[keywords]
+    ~[greet?],~[find?] @[keywords]
+    ~[greet?],@[keywords]
+%[inform](1659)
     @[product] with @[version]
     @[version] of @[product]
     @[version]
     @[product]
     @[keywords]
+    @[product] @[version]
 %[greet](123)
     ~[greet?]
     ~[greet?] ~[greet?]
@@ -23,12 +25,12 @@
 %[deny](123)
     ~[deny?]
     ~[deny?] ~[deny?]
+    ~[deny?] ~[thanks?]
 %[thanks](123)
     ~[thanks?]
     ~[thanks?] ~[thanks?]
 %[affirm](123)
     ~[affirm?]
-    ~[affirm?] ~[affirm?]
 
 ~[find]
     find
@@ -45,6 +47,11 @@
     how do i
     where can i
     look for
+    search
+    help me with
+    help me finding
+    can you please
+    how can you
 
 ~[infor]
     in
@@ -55,6 +62,120 @@
     related to
     ~[infor] product
     ~[infor] product
+
+~[apa]
+    APA
+    RTS
+    Advance Process Automation
+    Real-Time Solutions
+    Real Time Solutions
+    real time solutions
+    real time solution
+    real-time solution
+
+~[versions]
+    6.3
+    6.4
+    6.5
+    6.6
+    6.7
+    7.0
+
+@[keywords]
+    ~[set1]   
+
+@[product]
+    ~[apa]
+
+@[version]
+    ~[versions]
+~[greet]
+    hi
+    hello
+    hey
+    there?
+    hey buddy
+    hey bro
+    howdy?
+    ssup?
+    whatsup??
+    how are you?
+    what is your name?
+    how are you?
+    how you doing?
+    good morning
+    good afternoon
+    good evening
+~[goodbye]
+    bye
+    cya
+    bye bye
+    goodbye
+    see you
+    see ya
+    later
+    ttyl
+    good night
+    take care
+    get lost
+    byebye
+~[deny]
+    nah
+    no
+    shya
+    nupe
+    nahi
+    not at all
+    not really
+    i dont care
+    what the fuck
+    shutup
+    i hate it
+    whats wrong with u
+    wrong results
+    no
+~[thanks]
+    thanks
+    thankie
+    thanks alot
+    thank you
+    nice
+    nice job
+    very good
+    thanks a ton
+    thank you mate
+    you are good bot
+    best bot you are
+~[affirm]
+    wow
+    you're right
+    thats correct
+    you are awesome
+    perfect
+    right
+    indeed
+    yes
+    yep
+    correct
+    yup
+    sounds good
+    sounds correct
+    thats good
+    i am good
+    im ok
+    ok
+    cool
+    sounds good
+    yo
+~[fun]
+    funny
+    stupid
+    asshole
+    bad
+    shit
+    shitty
+    garbage
+    bitch
 
 ~[set1]
     Real-Time Solutions
@@ -1560,109 +1681,3 @@
     Accessing Advanced Process Automation Installation Files
 
 
-~[apa]
-    APA
-    RTS
-    Advance Process Automation
-    Real-Time Soltuions
-    Real-Time Solutions
-    Real Time Solutions
-    real time solutions
-    real time solution
-    real-time solution
-
-~[versions]
-    6.3
-    6.4
-    6.5
-    6.6
-    6.7
-    7.0
-
-@[keywords]
-    ~[set1]   
-
-@[product]
-    ~[apa]
-
-@[version]
-    ~[versions]
-~[greet]
-    hi
-    hello
-    hey
-    there?
-    hey buddy
-    hey bro
-    howdy?
-    ssup>
-    good morning
-    good afternoon
-    good evening
-~[goodbye]
-    bye
-    cya
-    bye bye
-    goodbye
-    see you
-    see ya
-    later
-    ttyl
-    good night
-    take care
-~[deny]
-    nah
-    no
-    shya
-    nupe
-    nahi
-    not at all
-    not really
-    i dont care
-    what the fuck
-    shutup
-    i hate it
-    whats wrong with u
-    wrong results
-    no
-~[thanks]
-    thanks
-    thankie
-    thanks alot
-    thank you
-    nice
-    nice job
-    very good
-    thanks a ton
-    thank you mate
-    you are good bot
-    best bot you are
-~[affirm]
-    wow
-    you're right
-    thats correct
-    you are awesome
-    perfect
-    right
-    indeed
-    yes
-    yep
-    correct
-    yup
-    sounds good
-    sounds correct
-    thats good
-    i am good
-    im ok
-    ok
-    cool
-    sounds good
-~[fun]
-    funny
-    stupid
-    asshole
-    bad
-    shit
-    shitty
-    garbage
-    bitch
