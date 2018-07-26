@@ -9,9 +9,17 @@ class DataAPI(object):
     def __init__(self):
         self.initData()
     def getContext(self):
-        ctx = pyodbc.connect("Driver={SQL Server Native Client 11.0};Server=Aniketd-m93\SQLEXPRESS;Database=Scrapper.Importer.Context.ScrapperContext;Trusted_Connection=yes;")
+        #ctx = pyodbc.connect("Driver={SQL Server Native Client 11.0};Server=tcp:aniket17.database.windows.net,1433;Database=Nice_Helpbot;Trusted_Connection=yes;")
+        ctx = pyodbc.connect(
+            r'DRIVER={ODBC Driver 11 for SQL Server};'
+            r'SERVER=tcp:aniket17.database.windows.net,1433;'
+            r'DATABASE=Nice_Helpbot;'
+            r'UID=user;'
+            r'PWD=password'
+            )
         return ctx
-    
+
+
     def getCursor(self,ctx):
         cursor = ctx.cursor()
         return cursor
@@ -57,7 +65,7 @@ class DataAPI(object):
         if(len(filtered_data) == 0 ):
             return []
         matches = sorted(filtered_data, key=lambda record: record['rank'], reverse=True)
-        take = 3
+        take = 5
         if( len(matches) < 3):
             take = len(matches)
         return matches[:take]
